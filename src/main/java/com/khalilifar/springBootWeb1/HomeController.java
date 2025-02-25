@@ -17,11 +17,8 @@ public class HomeController {
 
     //Accept the request when adding the two numbers
     @RequestMapping("add")
-    public String add(HttpServletRequest req, HttpSession session) {
+    public String add(int num1, int num2, HttpSession session) {
 
-        //to get value from request object
-        int num1 = Integer.parseInt(req.getParameter("num1"));
-        int num2 = Integer.parseInt(req.getParameter("num2"));
         int result = num1 + num2;
 
         //parse the name and the data
