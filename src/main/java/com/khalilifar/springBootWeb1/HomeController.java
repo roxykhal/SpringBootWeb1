@@ -19,7 +19,7 @@ public class HomeController {
     @RequestMapping("add")
     public String add(int num1, int num2, HttpSession session) {
 
-        int result = num1 + num2;
+        int result = num1 + num2 + 1;
 
         //parse the name and the data
         session.setAttribute("result", result);
