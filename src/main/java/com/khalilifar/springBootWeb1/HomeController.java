@@ -13,7 +13,7 @@ public class HomeController {
     //maps the request
     @RequestMapping("/")
     public String home() {
-        return "index.jsp";
+        return "index";
     }
 
     //Accept the request when adding the two numbers
@@ -26,7 +26,7 @@ public class HomeController {
         //The result is added to the Model object, which is passed to the view (result.jsp in this case).
         model.addAttribute("result", result);
 
-        return "result.jsp";
+        return "result";
 
 
     }
