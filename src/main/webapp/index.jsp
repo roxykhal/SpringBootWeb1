@@ -4,6 +4,12 @@ controller to send this to --%>
 <%@page language="java" %>
 
 <html>
+<head>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+</head>
     </body>
         <h2>Roxy calculator</h2>
 
