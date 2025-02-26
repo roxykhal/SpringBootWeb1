@@ -27,9 +27,10 @@ public class HomeController {
 
         int result = num1 + num2;
 
-        //mpdel object, used to pass data from controller to the view, in this case result.jsp view. Add attribute
+        //model object, used to pass data from controller to the view, in this case result.jsp view. Add attribute
         // adds calculated result to the model which can be accessed in JSP
         mv.addObject("result", result);
+        mv.setViewName("result");
 
         //controller will forward the user to a view named result.jsp and result is displayed to user
 
