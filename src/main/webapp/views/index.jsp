@@ -1,5 +1,7 @@
-<%-- create HTML project here, IN MVV, Index.jsp is a view and request goes to controller, so we need to create a
-controller to send this to --%>
+<%-- landing page of initial entry of app, when controller method home() is called it returns index, the controller will
+ render index.jsp which may have a form like below to add numbers
+
+--%>
 
 <%@page language="java" %>
 
