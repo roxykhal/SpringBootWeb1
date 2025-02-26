@@ -4,6 +4,7 @@ import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 //Controller class contains methods responsible for handling requests
 //@Controller defines spring MVC controller - will handle HTTP requests and return views
@@ -22,16 +23,17 @@ public class HomeController {
     @RequestMapping("add")
 
     //method accepts two parameters, which are auto populated from query parameters in request
-    public String add(int num1, int num2, Model model) {
+    public ModelAndView add(int num1, int num2, ModelAndView mv) {
 
         int result = num1 + num2;
 
         //mpdel object, used to pass data from controller to the view, in this case result.jsp view. Add attribute
         // adds calculated result to the model which can be accessed in JSP
-        model.addAttribute("result", result);
+        mv.addObject("result", result);
 
         //controller will forward the user to a view named result.jsp and result is displayed to user
-        return "result";
+
+        return mv;
 
 
     }
