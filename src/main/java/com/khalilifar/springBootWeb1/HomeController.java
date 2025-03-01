@@ -23,21 +23,23 @@ public class HomeController {
     @RequestMapping("add")
 
     //method accepts two parameters, which are auto populated from query parameters in request
-    public ModelAndView add(int num1, int num2, ModelAndView mv) {
 
+    public ModelAndView add(int num1, int num2) {
         int result = num1 + num2;
 
-        //model object, used to pass data from controller to the view, in this case result.jsp view. Add attribute
-        // adds calculated result to the model which can be accessed in JSP
+        // Creating a ModelAndView object and adding the result
+        ModelAndView mv = new ModelAndView();
+
+        // Adds calculated result to the model which can be accessed in the view (JSP)
         mv.addObject("result", result);
+
+        // Set the view name (JSP file)
         mv.setViewName("result");
 
-        //controller will forward the user to a view named result.jsp and result is displayed to user
-
         return mv;
-
-
     }
+
+}
 
 
 }
